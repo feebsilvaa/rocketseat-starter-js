@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <div id="app">
+    <input type="text" name="nome" id="nome">
+    <button class="botao" >Adicionar</button>
+  </div>
+
+  <script>
+    
+    var inputElement = document.getElementById('nome');
+    var buttonElement = document.getElementsByClassName('botao');
+    var inputElement = document.querySelector('div#app input#nome')
+    var buttonElement = document.querySelector('button.botao');
+
+    buttonElement.onclick = function() {
+      var text = inputElement.value;
+      if(text)
+        alert(`O seu nome é ${text}`);
+      else
+        alert('Por favor preencha o campo.');
+    }
+    console.log(inputElement);
+    console.log(buttonElement);
+
+    // Criando elementos na DOM com javascript
+    var linkElement = document.createElement('a');
+    linkElement.setAttribute('href', 'https://www.google.com.br');
+    var textElement = document.createTextNode('Acessar o Google.');
+    linkElement.appendChild(textElement);
+
+    var appElement = document.querySelector('div#app');
+    appElement.appendChild(linkElement);
+  </script>
+</body>
+</html>
